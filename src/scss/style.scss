@@ -32,6 +32,23 @@ header {
         }
       }
     }
+
+    .btn-container {
+      .button {
+        border: none;
+        padding: 2px 4px;
+
+        &.btn-login {
+          background: #fff;
+          border: 1px solid #dfdfdf;
+        }
+
+        &.btn-register {
+          background: #66cd00;
+          color: #fff;
+        }
+      }
+    }
   }
 }
 
@@ -141,6 +158,36 @@ header {
             color: #666666;
           }
         }
+
+        .progress {
+          grid-column-start: 2;
+          grid-column-end: 5;
+
+          padding: 10px;
+
+          .bar {
+            display: inline-block;
+            position: relative;
+            width: 70%;
+            background: #dfdfdf;
+            border: 1px solid #dfdfdf;
+
+            > div {
+              width: 70%;
+              display: block;
+              position: relative;
+              background: #00F;
+              color: #333333;
+              height: 20px;
+              line-height: 20px;
+            }
+          }
+
+          span {
+            font-size: 20px;
+            color: #00F;
+          }
+        }
       }
     }
 
@@ -195,6 +242,36 @@ header {
     margin: 0 auto;
     margin-top: 10px;
     border: 1px solid #dfdfdf;
+
+    &-nav {
+      padding: 4px 0;
+      border-bottom: 1px solid #dfdfdf;
+
+      ul {
+        list-style: none;
+        display: flex;
+    
+        li {
+          margin: 0 20px;
+          padding: 2px;
+          line-height: 28px;
+        }
+      }
+    }
+
+    &-content {
+      color: #666666;
+      padding: 20px 50px;
+
+      p {
+        margin-bottom: 8px;
+      }
+
+      .title {
+        text-align: center;
+        font-weight: bold;
+      }
+    }
   }
 }
 
@@ -202,4 +279,72 @@ footer {
   margin-top: 10px;
   height: 180px;
   background: #dddddd;
+
+  .footer-container {
+    width: 1280px;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px 0px;
+
+    display: grid;
+    grid-template-columns: 18% 18% 18% 46%;
+
+    .footer-item {
+      padding: 10px 20px;
+      color: #666666;
+      text-align: center;
+
+      &:not(:last-child) {
+        border-right: 1px solid #b4b4b4;
+      }
+
+      &.text-left {
+        text-align: left;
+      }
+
+      &-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .img {
+        background-image: url(../images/spilt2.png);
+        margin: 0 auto;
+
+        &.icon-wx {
+          width: 86px;
+          height: 22px;
+          background-position: -31px -50px;
+
+          &:hover {
+            background-position: -31px -71px;
+          }
+        }
+
+        &.icon-wb {
+          width: 86px;
+          height: 26px;
+          background-position: -30px 1px;
+
+          &:hover {
+            background-position: -30px -25px;
+          }
+        }
+      }
+
+      p {
+        font-size: 14px;
+        margin-bottom: 4px;
+
+        &.strong {
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        &.website {
+          font-style: italic;
+        }
+      }
+    }
+  }
 }
